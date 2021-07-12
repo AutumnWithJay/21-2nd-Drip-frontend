@@ -3,6 +3,7 @@ import { API } from '../../config';
 const KakaoLogin = history => {
   window.Kakao.Auth.login({
     success: res => {
+      console.log(res);
       const authToken = res.access_token;
 
       window.Kakao.API.request({

@@ -6,10 +6,10 @@ import { commonLayOut, flexSet } from '../../styles/mixin';
 import { API } from '../../config';
 import Map from '../../components/Map/Map';
 import Loading from '../../components/Loading/Loading';
-import axios from 'axios';
 import RecommendCard from '../../components/RecommendCard/RecommendCard';
 import Footer from '../../components/Footer/Footer';
 import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
+import UseAxios from '../../Hooks/UseAxios';
 
 const Detail = () => {
   const [clicked, setClicked] = useState(false);
@@ -22,51 +22,46 @@ const Detail = () => {
   const { productid: productId } = match.params;
   const authToken = localStorage.getItem('Token');
 
-  useEffect(() => {
-    axios({
-      method: 'get',
-      url: `${API}/products/${productId}`,
-      headers: {
-        authorization: authToken,
-      },
-    })
-      .then(res => {
-        console.log(res.data.result);
-        setProductData(res.data.result);
-        setIsContentLoading(false);
-        setClicked(res.data.result.Detail_info.check);
-      })
-      .catch(err => console.error(err));
-  }, []);
+  const { data: detailData, loading: detailLoading } = UseAxios(
+    `${API}/products/${productId}`,
+    'get',
+    {
+      authorization: authToken,
+    }
+  );
+
+  const { data: fetchedReviewData, loading: reviewLoading } = UseAxios(
+    `${API}/reviews/${productId}`,
+    'get',
+    {
+      authorization: authToken,
+    }
+  );
 
   useEffect(() => {
-    axios({
-      method: 'get',
-      url: `${API}/reviews/${productId}`,
-      headers: {
-        authorization: authToken,
-      },
-    })
-      .then(res => {
-        setReviewdata(res.data.result);
-        setIsReviewLoading(false);
-      })
-      .catch(err => console.error(err));
-  }, []);
+    if (detailData !== null && fetchedReviewData !== null) {
+      setProductData(detailData.result);
+      setIsContentLoading(detailLoading);
+      setReviewdata(fetchedReviewData.result);
+      setIsReviewLoading(reviewLoading);
+      setClicked(detailData.result.Detail_info.check);
+    }
+  }, [detailLoading, reviewLoading]);
 
   const handleClick = () => {
     setClicked(!clicked);
-    axios({
-      method: 'post',
-      url: `${API}/orders/bookmark`,
-      headers: {
+    UseAxios(
+      'post',
+      `${API}/orders/bookmark`,
+      {
         authorization: authToken,
       },
-      data: {
+      null,
+      {
         product_id: productId,
         status: 1,
-      },
-    }).then(res => console.log(res));
+      }
+    );
   };
 
   const goBack = () => {
@@ -206,7 +201,6 @@ const Detail = () => {
 
 const LoadingWrapper = styled.section`
   height: 100vh;
-  /* width: 100%; */
   ${flexSet('column', 'center', 'center')};
 
   > h1 {

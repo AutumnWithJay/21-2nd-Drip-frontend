@@ -62,7 +62,7 @@ const Main = () => {
                 price={parseInt(
                   list.discount !== '1' && list.discount
                 ).toLocaleString()}
-                region={list.adress}
+                region={list.address.substring(0, 2)}
                 isNew={list.new_tag}
                 isHot={list.hot_tag}
                 grade={list.avg_score}
@@ -86,7 +86,7 @@ const Main = () => {
                 price={parseInt(
                   list.discount !== '1' && list.discount
                 ).toLocaleString()}
-                region={list.adress}
+                region={list.address.substring(0, 2)}
                 isNew={list.new_tag}
                 isHot={list.hot_tag}
                 grade={list.avg_score}

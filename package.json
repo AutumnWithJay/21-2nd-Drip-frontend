@@ -32,6 +32,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://21st-weare-drip.netlify.app/",
   "browserslist": {
     "production": [
       ">0.2%",
