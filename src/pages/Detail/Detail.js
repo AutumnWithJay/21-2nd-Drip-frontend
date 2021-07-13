@@ -46,7 +46,7 @@ const Detail = () => {
       setIsReviewLoading(reviewLoading);
       setClicked(detailData.result.Detail_info.check);
     }
-  }, [detailLoading, reviewLoading]);
+  }, [detailData, detailLoading, fetchedReviewData, reviewLoading]);
 
   const handleClick = () => {
     setClicked(!clicked);

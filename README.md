@@ -3,6 +3,12 @@
 # DRIP front-end team 입니다!
 
 다양한 체험을 제공하는 [Frip](https://www.frip.com)을 모티브로 한 프로젝트
+<br><br>
+
+## Deploy 사이트
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae631648-37fd-4ed1-a5ad-731b1f885ce3/deploy-status)](https://21st-weare-drip.netlify.app/)
+<br><br>
 
 ## 프로젝트 계획 및 기간
 
@@ -37,11 +43,11 @@
 
 ### [찜 페이지]
 
-![DRIP_찜](https://github.com/wecode-bootcamp-korea/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80.gif)
+![DRIP_찜](https://github.com/AutumnWithJay/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%EC%B0%9C.gif?raw=true)
 
 ### [마이 페이지]
 
-![DRIP_마이페이지](https://github.com/wecode-bootcamp-korea/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80.gif)
+![DRIP_마이페이지](https://github.com/AutumnWithJay/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%ED%9B%84%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80.gif?raw=true)
 
 ### [검색 페이지]
 
@@ -49,7 +55,7 @@
 
 ### [후기 페이지]
 
-![DRIP_후기](https://github.com/wecode-bootcamp-korea/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80.gif)
+![DRIP_후기](https://github.com/AutumnWithJay/21-2nd-Drip-frontend/blob/master/public/Review/Images/DRIP_%ED%9B%84%EA%B8%B0%ED%8E%98%EC%9D%B4%EC%A7%80.gif?raw=true)
 
 ### Drip 유튜브 링크
 
@@ -137,8 +143,9 @@
 <br>
 
 ## 🛠 사용한 툴
-<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/><br> <img alt="Trello" src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"/><br><img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/><br> <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/><br> <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" /></a>
 
+<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/><br> <img alt="Trello" src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"/><br><img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/><br> <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/><br> <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" /></a> <br>
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
 <br>
 
 ## 👥 팀원

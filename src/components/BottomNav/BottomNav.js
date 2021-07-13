@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link, useHistory } from 'react-router-dom';
 import { flexSet } from '../../styles/mixin';
+import { UserContext } from '../../context';
 
 const BottomNav = () => {
+  const isLogin = useContext(UserContext);
+  console.log(isLogin);
   const currentToken = localStorage.getItem('Token');
   const history = useHistory();
 

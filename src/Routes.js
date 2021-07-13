@@ -15,6 +15,7 @@ import Review from './pages/Review/Review';
 import Search from './pages/Search/Search';
 import Order from './pages/Order/Order';
 import ReviewWrite from './pages/ReviewWrite/ReviewWrite';
+import UserContextProvier from './context';
 
 const Routes = () => (
   <>
@@ -32,8 +33,8 @@ const Routes = () => (
           <Route exact path="/mypage" component={MyPage} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/review/:id" component={Review} />
-          <Route exact path="/search" component={Search} />
           <Route exact path="/review-write" component={ReviewWrite} />
+          <Route exact path="/search" component={Search} />
           <Route exact path="/order" component={Order} />
           <Route exact path="/*" component={Main} />
         </Switch>
